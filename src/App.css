@@ -29,9 +29,15 @@
 .text-ancent-text {
 	color: var(--color-accent-blue);
 }
+.text-med-emphasis{
+	color: var(--color-high-emphasis);
+}
 .text-base-color {
 	color: #819c9c;
 }
 .text-red-text {
 	color: var(--color-red-text);
+}
+.border-ancent-blue {
+	color: var(--color-accent-blue);
 }
