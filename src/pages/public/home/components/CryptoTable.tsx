@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/table"
 import { formatLargeNumber } from "@/utils/formatLargeNum"
 import { useGetMarketQuery } from "@/features/market/marketApiSlice"
+import MarketChart from "./MarketChart"
 const CryptoTable = () => {
     const { data, isLoading, isError } = useGetMarketQuery({})
     // const data = [
@@ -144,7 +145,7 @@ const CryptoTable = () => {
                 </TableHeader>
                 <TableBody>
                     {
-                        data?.map((coin:any) => (
+                        data?.map((coin: any) => (
                             <TableRow>
                                 <TableCell className="text-sm px-2 py-3">
                                     <div className="flex shrink">
@@ -157,11 +158,13 @@ const CryptoTable = () => {
                                         </div>
                                     </div>
                                 </TableCell>
-                                <TableCell className="text-white text-right">{coin.current_price}</TableCell>
+                                <TableCell className="text-white text-right">${coin.current_price}</TableCell>
                                 <TableCell className="text-white text-right">{coin.circulating_supply}</TableCell>
                                 <TableCell className="text-white text-right">${formatLargeNumber(coin.market_cap)}</TableCell>
                                 <TableCell className="text-red-text text-right">{coin.price_change_percentage_24h}%</TableCell>
-                                <TableCell className="text-white text-right">{coin.market_cap_change_24h}%</TableCell>
+                                <TableCell className="flex align-center justify-end">
+                                    <MarketChart prices={coin.sparkline_in_7d.price} />
+                                </TableCell>
                             </TableRow>
                         ))
                     }
