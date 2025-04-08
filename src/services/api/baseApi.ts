@@ -8,7 +8,10 @@ export const baseCoingekoApi = createApi({
 
 export const baseBinanceApi = createApi({
     reducerPath: 'binanceApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'https://api.example.com' }),
-    tagTypes: [],
+    baseQuery: fetchBaseQuery({
+        baseUrl: 'https://api4.binance.com/api/v1',
+    }),
+
+    tagTypes: ["Bids"],
     endpoints: () => ({}),
 });

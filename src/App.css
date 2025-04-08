@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+	font-family: "Roboto", sans-serif;
+}
 .bg-base-background-10 {
 	background-color: #0e0f14;
 }
@@ -29,7 +33,7 @@
 .text-ancent-text {
 	color: var(--color-accent-blue);
 }
-.text-med-emphasis{
+.text-med-emphasis {
 	color: var(--color-high-emphasis);
 }
 .text-base-color {
