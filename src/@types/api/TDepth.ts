@@ -1,5 +1,5 @@
 export interface TDepth {
     lastUpdateId: number;
-    bids: Array<string[]>;
-    asks: Array<string[]>;
+    bids: [string, string][];
+    asks: [string, string][];
 }

@@ -12,6 +12,6 @@ export const baseBinanceApi = createApi({
         baseUrl: 'https://api4.binance.com/api/v1',
     }),
 
-    tagTypes: ["Bids"],
+    tagTypes: ["Bids", "Trades", "Tickers"],
     endpoints: () => ({}),
 });
